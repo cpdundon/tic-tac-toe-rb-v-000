@@ -44,4 +44,15 @@ def position_taken?(board, idx)
   !(chr == "")
 end
 
+def turn()
+
+  board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+  
+  puts "Please enter a move: 1-9"
+  rtn = gets.strip
+  idx = input_to_index(rtn)
+  
+  move(board, idx)  
+  
+end
 
