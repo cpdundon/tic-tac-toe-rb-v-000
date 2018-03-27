@@ -76,5 +76,17 @@ def current_player(board)
   else
     return "O"
   end
+end
   
+def won?(board)
+  WIN_COMBINATIONS.each do |arr|
+    b_0 = board[arr[0]].strip
+    b_1 = board[arr[1]].strip
+    b_2 = board[arr[2]].strip
+    
+    if ((b_0 == b_1) && (b_0 == b_2)) && b_0 != ""
+      return [arr[0], arr[1], arr[2]]
+    end
+  end
+  false
 end
