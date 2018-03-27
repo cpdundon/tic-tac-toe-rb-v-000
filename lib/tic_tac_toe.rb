@@ -47,8 +47,6 @@ def position_taken?(board, idx)
 end
 
 def turn(board)
-
-  #board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   
   puts "Please enter a move: 1-9"
   rtn = gets.strip
@@ -58,6 +56,7 @@ def turn(board)
     turn(board)
   end
   
+  display_board(board)
   true
 end
 
