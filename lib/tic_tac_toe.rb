@@ -26,11 +26,10 @@ def move(board, idx, token = "X")
   
   if v
     board[idx] = token
-    display_board(board)
     return v
   end
   
-  !v
+  v
 end
 
 def valid_move?(board, idx)
