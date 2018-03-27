@@ -32,7 +32,7 @@ def move(board, idx, token = "X")
 end
 
 def valid_move?(board, idx)
-  if !idx.between(0, 8)
+  if !idx.between?(0, 8)
     return false
   end
   
