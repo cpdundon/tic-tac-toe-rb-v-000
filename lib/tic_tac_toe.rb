@@ -21,7 +21,7 @@ def input_to_index(input)
   return (input.to_i - 1)
 end
 
-def move(board, idx, token)
+def move(board, idx, token = "X")
   v = valid_move?(board, idx)
   
   if v
