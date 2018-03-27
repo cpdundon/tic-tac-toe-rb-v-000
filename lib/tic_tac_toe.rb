@@ -22,13 +22,15 @@ def input_to_index(input)
 end
 
 def move(board, idx, token)
-  #idx = input_to_index(input)
+  v = valid_move?(board, idx)
   
-  if valid_move?(board, idx)
+  if v
     board[idx] = token
+    display_board(board)
+    return v
   end
   
-  display_board(board)
+  !v
 end
 
 def valid_move?(board, idx)
@@ -52,7 +54,8 @@ def turn()
   rtn = gets.strip
   idx = input_to_index(rtn)
   
-  move(board, idx)  
+  if !move(board, idx) 
+    
   
 end
 
