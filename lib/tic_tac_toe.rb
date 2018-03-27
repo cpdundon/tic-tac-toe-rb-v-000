@@ -50,8 +50,9 @@ def turn(board)
   puts "Please enter a move: 1-9"
   rtn = gets.strip
   idx = input_to_index(rtn)
+  token = current_player(board)
   
-  if !move(board, idx) 
+  if !move(board, idx, token) 
     turn(board)
   end
   
