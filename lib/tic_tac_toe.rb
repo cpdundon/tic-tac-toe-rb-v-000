@@ -141,5 +141,9 @@ def play(board)
     turn(board)
   end
   
-  
+  if won?(board)
+    winner_ = winner(board)
+    Puts "Congratulations - #{winner_}!!!  You have won the game. "
+  else
+    puts "This game is a draw."
 end
