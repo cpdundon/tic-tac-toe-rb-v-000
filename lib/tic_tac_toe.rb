@@ -43,3 +43,5 @@ def position_taken?(board, idx)
   chr = board[idx].strip
   !(chr == "")
 end
+
+
