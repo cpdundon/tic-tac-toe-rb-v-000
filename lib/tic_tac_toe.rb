@@ -90,3 +90,47 @@ def won?(board)
   end
   false
 end
+
+def full?(board)
+  count = 0
+  board.each do |elem|
+    e = elem.strip
+    count += ((e.size == 0) ? 0 : 1)
+  end
+  count == 9
+end
+
+def draw?(board)
+  w = won?(board)
+  f = full?(board)
+  
+  if w
+    return false
+  elsif !w && !f
+    return false
+  elsif !w && f
+    return true
+  else
+    return false
+  end
+  
+end
+
+def over?(board)
+  w = won?(board)
+  f = full?(board)
+  d = draw?(board)
+  
+  w || f || d ? true : false
+end
+
+def winner(board)
+  w = won?(board)
+  
+  if !w 
+    return nil
+  else
+    return board[w[0]]
+  end
+  
+end
